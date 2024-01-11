@@ -13,17 +13,36 @@
 	<script type="text/javascript" src="version_dictionary.js"></script>
 	<script type="text/javascript" src="addon_dictionary.js"></script>
 	<script type="text/javascript" src="tcresearch.js"></script>
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="tcresearch.css">
 	<style type="text/css">
 	.select2-container .select2-choice {
 		height: 44px;
 	}
+
+	body {
+    transition: background-color 0.3s ease;
+}
+
+body.night-mode {
+    background-color: #2a2a2a; /* Change the background color for night mode */
+    color: #ffffff; /* Change the text color for night mode */
+}
+
+
+/* Add any additional night mode styles as needed */
+
+/* Night mode specific styles for table content */
+body.night-mode content-table {
+    color: #ffffff; /* Change text color for table content in night mode */
+}
 	</style>
 </head>
 <body>
 	<h2>神秘时代 4.x-5.x 研究助手</h2>
 	<div id="combination_box"><div id="left"></div><span class="operator">+</span><div id="right"></div><span class="operator">=</span><div id="equals"></div></div>
-	<table>
+	<table class="content-table">
+		<button id="nightModeToggle">Toggle Night Mode</button>
 		<tr>
 			<td>Version:</td>
 			<td>
